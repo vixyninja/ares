@@ -1,195 +1,132 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-synthesis: none;
+:root {
+  --base: #ffffff;
+  --accent: #48a860;
+  --shadow: #48a860;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+.cool {
+  font: bold 3rem/1.2 var(--font-dm-sans);
+}
+.cool span {
+  color: var(--shadow);
+  display: inline-block;
+  position: relative;
+}
+.cool span:nth-child(1)::before,
+.cool span:nth-child(1)::after {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.cool span:nth-child(2)::before,
+.cool span:nth-child(2)::after {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.cool span:nth-child(3)::before,
+.cool span:nth-child(3)::after {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.cool span:nth-child(4)::before,
+.cool span:nth-child(4)::after {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.cool span:nth-child(5)::before,
+.cool span:nth-child(5)::after {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.cool span:nth-child(6)::before,
+.cool span:nth-child(6)::after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.cool span:nth-child(7)::before,
+.cool span:nth-child(7)::after {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.cool span:nth-child(8)::before,
+.cool span:nth-child(8)::after {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.cool span:nth-child(9)::before,
+.cool span:nth-child(9)::after {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.cool span:nth-child(10)::before,
+.cool span:nth-child(10)::after {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+@media (prefers-reduced-motion) {
+  .cool span {
+    color: var(--base);
+  }
+}
+.cool span::before {
+  -webkit-animation: max-height 2.5s cubic-bezier(0.61, 1, 0.88, 1) infinite
+    alternate both;
+  animation: max-height 2.5s cubic-bezier(0.61, 1, 0.88, 1) infinite alternate
+    both;
+  color: var(--accent);
+}
+.cool span::after {
+  -webkit-animation: max-width 4s cubic-bezier(0.61, 1, 0.88, 1) infinite
+    alternate both;
+  animation: max-width 4s cubic-bezier(0.61, 1, 0.88, 1) infinite alternate both;
+  color: var(--base);
+}
+.cool span::before,
+.cool span::after {
+  content: attr(data-text);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  speak: none;
+}
+@media (prefers-reduced-motion) {
+  .cool span::before,
+  .cool span::after {
+    -webkit-animation: none;
+    animation: none;
+    content: "";
   }
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  font-family: var(--font-geist-sans);
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-button.secondary {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  font-family: var(--font-geist-sans);
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  background: transparent;
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-.footer {
-  font-family: var(--font-geist-sans);
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+@-webkit-keyframes max-width {
+  from {
+    max-width: 0;
   }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  to {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+@keyframes max-width {
+  from {
+    max-width: 0;
   }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  to {
+    max-width: 100%;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@-webkit-keyframes max-height {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
   }
 }
-
+@keyframes max-height {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}

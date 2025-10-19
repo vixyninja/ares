@@ -12,9 +12,14 @@
   },
   "dependencies": {
     "@ares/ui": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.14",
+    "install": "^0.13.0",
     "next": "^15.5.0",
+    "npm": "^11.6.2",
+    "postcss": "^8.5.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
     "@ares/eslint-config": "workspace:*",
@@ -23,7 +28,8 @@
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
     "eslint": "^9.34.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "typescript": "5.9.2"
   }
 }
-
