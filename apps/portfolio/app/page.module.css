@@ -1,14 +1,8 @@
-:root {
-  --base: #ffffff;
-  --accent: #48a860;
-  --shadow: #48a860;
-}
-
 .cool {
   font: bold 3rem/1.2 var(--font-dm-sans);
 }
 .cool span {
-  color: var(--shadow);
+  color: #48a860;
   display: inline-block;
   position: relative;
 }
@@ -72,13 +66,13 @@
     alternate both;
   animation: max-height 2.5s cubic-bezier(0.61, 1, 0.88, 1) infinite alternate
     both;
-  color: var(--accent);
+  color: #48a860;
 }
 .cool span::after {
   -webkit-animation: max-width 4s cubic-bezier(0.61, 1, 0.88, 1) infinite
     alternate both;
   animation: max-width 4s cubic-bezier(0.61, 1, 0.88, 1) infinite alternate both;
-  color: var(--base);
+  color: #ffffff;
 }
 .cool span::before,
 .cool span::after {
@@ -86,7 +80,7 @@
   left: 0;
   overflow: hidden;
   position: absolute;
-  speak: none;
+  speak-as: none;
 }
 @media (prefers-reduced-motion) {
   .cool span::before,

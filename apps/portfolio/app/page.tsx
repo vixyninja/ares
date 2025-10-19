@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import styles from "./page.module.css";
 
@@ -60,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Navigation */}
-        <div className="flex h-full w-1/4 flex-col justify-center border-r border-white bg-red-950">
+        {/* <div className="flex h-full w-1/4 flex-col justify-center border-r border-white bg-red-950">
           <nav className="flex flex-col items-center gap-4">
             <Link href="#about" className="text-white">
               <span className="text-white">About</span>
@@ -75,7 +74,7 @@ export default function Home() {
               <span className="text-white">Contact</span>
             </Link>
           </nav>
-        </div>
+        </div> */}
       </div>
     </React.Fragment>
   );
