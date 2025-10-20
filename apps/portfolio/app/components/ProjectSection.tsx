@@ -8,14 +8,16 @@ export function ProjectsSection({ repos }: { repos: GithubRepo[] }) {
     <section id="projects" className="mt-6">
       {/* Header */}
       <div className="mb-2">
-        <h2 className="px-4 text-2xl font-bold text-white">Projects</h2>
+        <h2 className="px-4 text-2xl font-bold text-white">
+          Projects {repos.length > 0 && `(${repos.length})`}
+        </h2>
         <p className="px-4 text-sm text-white/80 opacity-70">
           Some of my featured open-source and personal projects.
         </p>
       </div>
 
       {/* Grid layout */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
         {repos.map((repo) => (
           <ProjectCard
             key={repo.id}

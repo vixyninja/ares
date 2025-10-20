@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Huỳnh Hồng Vỹ",
+  title: "Portfolio - Huynh Hong Vy",
   description: "Portfolio of Huynh Hong Vy",
 };
 

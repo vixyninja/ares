@@ -24,28 +24,32 @@ export default async function Home() {
   const repos = await fetchUserRepos("vixyninja");
   return (
     <React.Fragment>
-      <div className="mx-auto flex h-screen w-4xl flex-row">
+      <div className="mx-auto flex h-screen w-full flex-col lg:w-4xl xl:w-5xl">
         <div className="mx-auto flex h-full w-full max-w-7xl flex-row">
           <div className="flex flex-row gap-12">
             <div className="h-full w-10 border-white bg-[#48A860] opacity-25"></div>
           </div>
-          <div className="relative flex h-full flex-col overflow-y-auto pt-2">
+          <div className="relative mx-auto flex w-full max-w-7xl flex-col overflow-y-auto pt-2">
             {/* Header */}
-            <header className="mx-auto flex h-16 w-full px-4">
+            <header className="mx-auto flex h-16 w-full items-center justify-between px-4">
               {/* Logo */}
               <div className="flex items-center">
-                <span className="text-3xl font-bold text-white">Portfoli</span>
-                <span className="text-3xl font-bold text-[#48A860]">o</span>
+                <span className="text-2xl font-bold text-white sm:text-3xl">
+                  Portfoli
+                </span>
+                <span className="text-2xl font-bold text-[#48A860] sm:text-3xl">
+                  o
+                </span>
               </div>
             </header>
 
             {/* Avatar */}
-            <div className="avatar absolute top-6 right-10 h-24 w-24">
+            <div className="avatar absolute top-6 right-10 hidden h-24 w-24 lg:block">
               <Link href={"/avatar.jpg"} target="_blank">
                 <Image
                   alt="Huynh Hong Vy"
                   src={"/ares/avatar.jpg"}
-                  className="w-24 rounded-full border object-cover object-top ring-2 ring-[#48A860] ring-offset-2 ring-offset-[#ffbbbb]"
+                  className="w-20 rounded-full border object-cover object-top ring-2 ring-[#48A860] ring-offset-2 ring-offset-[#ffbbbb] sm:w-24"
                   fill={true}
                   draggable={false}
                 />
@@ -54,7 +58,12 @@ export default async function Home() {
 
             {/* About */}
             <section id="about">
-              <p className={styles.cool + " px-4"}>
+              <p
+                className={
+                  styles.cool +
+                  " px-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+                }
+              >
                 <span data-text="Hi,">Hi,</span>
                 <span data-text=" &nbsp;I'm"> &nbsp;I&apos;m</span>
                 <span data-text=" &nbsp;Vy."> &nbsp;Vy.</span>
@@ -65,7 +74,7 @@ export default async function Home() {
                 <span data-text=" &nbsp;you!"> &nbsp;you!</span>
               </p>
               <br />
-              <p className="px-4 pb-4 indent-10 text-sm text-white italic">
+              <p className="px-4 pb-4 indent-8 text-sm text-white italic sm:indent-10 sm:text-base">
                 &quot;I&apos;m Huynh Hong Vy, a software engineer with a passion
                 for building backend systems. I&apos;m now open to new
                 opportunities and available for hire. Backend developer focused
