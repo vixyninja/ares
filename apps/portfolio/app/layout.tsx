@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="night">
       <body className={`${dmSans.variable} bg-black`} suppressHydrationWarning>
         <div id="content">{children}</div>
       </body>

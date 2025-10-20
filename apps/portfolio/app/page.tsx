@@ -1,18 +1,35 @@
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { ProjectCard } from "./components/ProjectCard";
+import {
+  DockerIcon,
+  GitHubIcon,
+  GitIcon,
+  GoIcon,
+  HomebrewIcon,
+  LinuxIcon,
+  MongoDBIcon,
+  MySQLIcon,
+  NodeIcon,
+  PostgreSQLIcon,
+  RedisIcon,
+  TypeScriptIcon,
+} from "./constants";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <React.Fragment>
       <div className="mx-auto flex h-screen w-4xl flex-row">
-        <div className="mx-auto flex h-full w-3/4 max-w-7xl flex-row">
-          {/* Double Vertical Line */}
+        <div className="mx-auto flex h-full w-full max-w-7xl flex-row">
           <div className="flex flex-row gap-12">
-            <div className="h-full w-10 border-r border-l border-white bg-[#48A860] opacity-25"></div>
+            <div className="h-full w-10 border-white bg-[#48A860] opacity-25"></div>
           </div>
-          <div className="flex h-full flex-col overflow-y-auto px-4 py-2">
+          <div className="relative flex h-full flex-col overflow-y-auto pt-2">
             {/* Header */}
-            <header className="mx-auto flex h-16 w-full">
+            <header className="mx-auto flex h-16 w-full px-4">
               {/* Logo */}
               <div className="flex items-center">
                 <span className="text-3xl font-bold text-white">Portfoli</span>
@@ -20,9 +37,22 @@ export default function Home() {
               </div>
             </header>
 
+            {/* Avatar */}
+            <div className="avatar absolute top-6 right-10 h-24 w-24">
+              <Link href={"/avatar.jpg"} target="_blank">
+                <Image
+                  alt="Huynh Hong Vy"
+                  src={"/avatar.jpg"}
+                  className="w-24 rounded-full border object-cover object-top ring-2 ring-[#48A860] ring-offset-2 ring-offset-[#ffbbbb]"
+                  fill={true}
+                  draggable={false}
+                />
+              </Link>
+            </div>
+
             {/* About */}
             <section id="about">
-              <p className={styles.cool}>
+              <p className={styles.cool + " px-4"}>
                 <span data-text="Hi,">Hi,</span>
                 <span data-text=" &nbsp;I'm"> &nbsp;I&apos;m</span>
                 <span data-text=" &nbsp;Vy."> &nbsp;Vy.</span>
@@ -33,48 +63,219 @@ export default function Home() {
                 <span data-text=" &nbsp;you!"> &nbsp;you!</span>
               </p>
               <br />
-              <p className="text-white">
-                I&apos;m <b>Huynh Hong Vy</b>, a software engineer with a
-                passion for building backend systems. I previously worked at
-                <a href="https://cozwork.com/vi/" className="text-white">
-                  &nbsp;
-                  <b>Cozwork JSC</b> as a Backend Developer. I&apos;m now open
-                  to new opportunities and available for hire.
-                </a>
+              <p className="px-4 pb-4 indent-10 text-sm text-white italic">
+                &quot;I&apos;m Huynh Hong Vy, a software engineer with a passion
+                for building backend systems. I&apos;m now open to new
+                opportunities and available for hire. Backend developer focused
+                on <b>Go</b>
+                ,&nbsp;
+                <b>Node.js</b>, and <b>Clean Architecture</b>.&quot;
               </p>
             </section>
-
             {/* Skills */}
-            <section id="skills"></section>
+            <section id="skills">
+              <div className="mt-2">
+                <span className="px-4 text-xl font-bold text-white">
+                  Skills
+                </span>
 
+                <div>
+                  <div>
+                    <h3 className="mt-2 px-4 text-sm font-semibold text-white/80">
+                      Languages & Runtime
+                    </h3>
+                    <div className="mt-2 flex flex-wrap gap-2 px-4">
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <GoIcon className="h-5 w-5" href="https://go.dev/" />
+                        Go
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <TypeScriptIcon
+                          className="h-5 w-5"
+                          href="https://www.typescriptlang.org/"
+                        />
+                        TypeScript
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <NodeIcon
+                          className="h-5 w-5"
+                          href="https://nodejs.org/"
+                        />
+                        Node.js
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mt-2 px-4 text-sm font-semibold text-white/80">
+                      Tools
+                    </h3>
+                    <div className="mt-2 flex flex-wrap gap-2 px-4">
+                      <div className="badge badge-outline h-8 gap-2 px-4 text-white">
+                        <GitIcon
+                          className="h-5 w-5"
+                          href="https://git-scm.com/"
+                        />
+                        Git
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <GitHubIcon
+                          className="h-5 w-5"
+                          href="https://github.com/"
+                        />
+                        GitHub
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <DockerIcon
+                          className="h-5 w-5"
+                          href="https://www.docker.com/"
+                        />
+                        Docker
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <LinuxIcon
+                          className="h-5 w-5"
+                          href="https://www.linux.org/"
+                        />
+                        Linux
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <HomebrewIcon
+                          className="h-5 w-5"
+                          href="https://brew.sh/"
+                        />
+                        Homebrew
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mt-2 px-4 text-sm font-semibold text-white/80">
+                      Databases
+                    </h3>
+                    <div className="mt-2 flex flex-wrap gap-2 px-4">
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <MySQLIcon
+                          className="h-5 w-5"
+                          href="https://www.mysql.com/"
+                        />
+                        MySQL
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <PostgreSQLIcon
+                          className="h-5 w-5"
+                          href="https://www.postgresql.org/"
+                        />
+                        PostgreSQL
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <MongoDBIcon
+                          className="h-5 w-5"
+                          href="https://www.mongodb.com/"
+                        />
+                        MongoDB
+                      </div>
+                      <div className="badge badge-outline h-8 gap-2 text-white">
+                        <RedisIcon
+                          className="h-5 w-5"
+                          href="https://redis.io/"
+                        />
+                        Redis
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
             {/* Projects */}
-            <section id="projects"></section>
+            <section id="projects">
+              <div className="mt-6">
+                <span className="px-4 text-xl font-bold text-white">
+                  Projects
+                </span>
 
-            {/* Contact */}
-            <section id="contact"></section>
+                <div className="grid grid-cols-1 gap-4 px-4 py-4 sm:grid-cols-2 lg:grid-cols-3">
+                  <ProjectCard
+                    name="ares"
+                    description="Monorepo with Next.js apps and shared packages."
+                    language="TypeScript"
+                    stars={0}
+                    href="https://github.com/vixyninja/ares"
+                  />
+                  <ProjectCard
+                    name="portfolio"
+                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
+                    language="TypeScript"
+                    stars={0}
+                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
+                  />
 
+                  <ProjectCard
+                    name="portfolio"
+                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
+                    language="TypeScript"
+                    stars={0}
+                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
+                  />
+                  <ProjectCard
+                    name="portfolio"
+                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
+                    language="TypeScript"
+                    stars={0}
+                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
+                  />
+                </div>
+              </div>
+            </section>
             {/* Footer */}
-            <footer id="footer"></footer>
+            <section id="footer">
+              <footer className="mt-16 flex flex-col items-center justify-center text-white">
+                <div className="flex flex-col items-center justify-center">
+                  <h2 className="text-xl font-bold text-white">
+                    Huynh Hong Vy
+                  </h2>
+                  <p className="text-sm text-white/80">
+                    Backend Developer • <b>Go</b> & <b>Node.js</b>
+                  </p>
+                </div>
+                <div className="flex flex-row gap-4">
+                  <nav className="mt-2 grid grid-flow-col gap-6">
+                    <a
+                      href="https://github.com/vixyninja"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      <FaGithub size={22} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/vixyninja"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      <FaLinkedin size={22} />
+                    </a>
+                    <a
+                      href="mailto:hhvy2003.dev@gmail.com"
+                      className="hover:text-primary transition-colors"
+                    >
+                      <FaEnvelope size={22} />
+                    </a>
+                  </nav>
+
+                  <div className="mt-3 pb-4">
+                    <p className="text-sm opacity-60">
+                      © {new Date().getFullYear()} Huynh Hong Vy — All rights
+                      reserved.
+                    </p>
+                  </div>
+                </div>
+              </footer>
+            </section>
+          </div>
+          <div className="flex flex-row gap-12">
+            <div className="h-full w-10 border-white bg-[#ff0000] opacity-25"></div>
           </div>
         </div>
-
-        {/* Navigation */}
-        {/* <div className="flex h-full w-1/4 flex-col justify-center border-r border-white bg-red-950">
-          <nav className="flex flex-col items-center gap-4">
-            <Link href="#about" className="text-white">
-              <span className="text-white">About</span>
-            </Link>
-            <Link href="#skills" className="text-white">
-              <span className="text-white">Skills</span>
-            </Link>
-            <Link href="#projects" className="text-white">
-              <span className="text-white">Projects</span>
-            </Link>
-            <Link href="#contact" className="text-white">
-              <span className="text-white">Contact</span>
-            </Link>
-          </nav>
-        </div> */}
       </div>
     </React.Fragment>
   );
