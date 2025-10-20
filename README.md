@@ -1,6 +1,15 @@
-# Turborepo starter
+# Ares Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+Monorepo for my personal projects and portfolio.
+
+- Apps:
+  - `apps/portfolio`: My developer portfolio (Next.js 15, Tailwind CSS 4, daisyUI). Static-exported for GitHub Pages.
+  - `apps/web`, `apps/docs`: Example Next.js apps.
+- Packages:
+  - `@ares/ui`: Shared UI components
+  - `@ares/eslint-config`, `@ares/typescript-config`: Shared config
+
+Tech highlights: TypeScript, Next.js App Router, Tailwind v4, daisyUI, Turborepo, pnpm.
 
 ## Using this example
 

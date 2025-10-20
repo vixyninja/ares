@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
-import { ProjectCard } from "./components/ProjectCard";
+import { ProjectsSection } from "./components/ProjectSection";
 import {
   DockerIcon,
   GitHubIcon,
@@ -17,9 +17,11 @@ import {
   RedisIcon,
   TypeScriptIcon,
 } from "./constants";
+import { fetchUserRepos } from "./lib/github";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default async function Home() {
+  const repos = await fetchUserRepos("vixyninja");
   return (
     <React.Fragment>
       <div className="mx-auto flex h-screen w-4xl flex-row">
@@ -186,45 +188,8 @@ export default function Home() {
               </div>
             </section>
             {/* Projects */}
-            <section id="projects">
-              <div className="mt-6">
-                <span className="px-4 text-xl font-bold text-white">
-                  Projects
-                </span>
+            <ProjectsSection repos={repos} />
 
-                <div className="grid grid-cols-1 gap-4 px-4 py-4 sm:grid-cols-2 lg:grid-cols-3">
-                  <ProjectCard
-                    name="ares"
-                    description="Monorepo with Next.js apps and shared packages."
-                    language="TypeScript"
-                    stars={0}
-                    href="https://github.com/vixyninja/ares"
-                  />
-                  <ProjectCard
-                    name="portfolio"
-                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
-                    language="TypeScript"
-                    stars={0}
-                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
-                  />
-
-                  <ProjectCard
-                    name="portfolio"
-                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
-                    language="TypeScript"
-                    stars={0}
-                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
-                  />
-                  <ProjectCard
-                    name="portfolio"
-                    description="Personal portfolio built with Next.js and Tailwind/daisyUI."
-                    language="TypeScript"
-                    stars={0}
-                    href="https://github.com/vixyninja/ares/tree/main/apps/portfolio"
-                  />
-                </div>
-              </div>
-            </section>
             {/* Footer */}
             <section id="footer">
               <footer className="mt-16 flex flex-col items-center justify-center text-white">
