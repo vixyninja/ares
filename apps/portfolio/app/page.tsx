@@ -44,7 +44,7 @@ export default async function Home() {
               <Link href={"/avatar.jpg"} target="_blank">
                 <Image
                   alt="Huynh Hong Vy"
-                  src={"/avatar.jpg"}
+                  src={"/ares/avatar.jpg"}
                   className="w-24 rounded-full border object-cover object-top ring-2 ring-[#48A860] ring-offset-2 ring-offset-[#ffbbbb]"
                   fill={true}
                   draggable={false}
