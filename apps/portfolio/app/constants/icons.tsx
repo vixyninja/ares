@@ -10,7 +10,7 @@ export const GitHubIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/github-light.svg"
+      src="/ares/github-light.svg"
       alt="GitHub"
       width={30}
       height={30}
@@ -28,7 +28,7 @@ export const LinkedInIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/linkedin.svg"
+      src="/ares/linkedin.svg"
       alt="LinkedIn"
       width={30}
       height={30}
@@ -46,7 +46,7 @@ export const FacebookIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/facebook.svg"
+      src="/ares/facebook.svg"
       alt="Facebook"
       width={30}
       height={30}
@@ -64,7 +64,7 @@ export const InstagramIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/instagram.svg"
+      src="/ares/instagram.svg"
       alt="Instagram"
       width={30}
       height={30}
@@ -82,7 +82,7 @@ export const ReactIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/reactjs.svg"
+      src="/ares/reactjs.svg"
       alt="React"
       width={30}
       height={30}
@@ -100,7 +100,7 @@ export const NodeIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/nodejs.svg"
+      src="/ares/nodejs.svg"
       alt="Node.js"
       width={30}
       height={30}
@@ -118,7 +118,7 @@ export const GoIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/go.svg"
+      src="/ares/go.svg"
       alt="Go"
       width={30}
       height={30}
@@ -136,7 +136,7 @@ export const TypeScriptIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/typescript.svg"
+      src="/ares/typescript.svg"
       alt="TypeScript"
       width={30}
       height={30}
@@ -154,7 +154,7 @@ export const AngularIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/angular.svg"
+      src="/ares/angular.svg"
       alt="Angular"
       width={30}
       height={30}
@@ -172,7 +172,7 @@ export const DockerIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/docker.svg"
+      src="/ares/docker.svg"
       alt="Docker"
       width={30}
       height={30}
@@ -190,7 +190,7 @@ export const LinuxIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/linux.svg"
+      src="/ares/linux.svg"
       alt="Linux"
       width={30}
       height={30}
@@ -208,7 +208,7 @@ export const MongoDBIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/mongodb.svg"
+      src="/ares/mongodb.svg"
       alt="MongoDB"
       width={30}
       height={30}
@@ -226,7 +226,7 @@ export const PostgreSQLIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/postgresql.svg"
+      src="/ares/postgresql.svg"
       alt="PostgreSQL"
       width={30}
       height={30}
@@ -244,7 +244,7 @@ export const MySQLIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/mysql.svg"
+      src="/ares/mysql.svg"
       alt="MySQL"
       width={30}
       height={30}
@@ -262,7 +262,7 @@ export const RedisIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/redis.svg"
+      src="/ares/redis.svg"
       alt="Redis"
       width={30}
       height={30}
@@ -280,7 +280,7 @@ export const GitIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/git.svg"
+      src="/ares/git.svg"
       alt="Git"
       width={30}
       height={30}
@@ -298,7 +298,7 @@ export const HomebrewIcon = ({
 }) => (
   <a href={href} target="_blank" rel="noopener noreferrer">
     <Image
-      src="/homebrew.svg"
+      src="/ares/homebrew.svg"
       alt="Homebrew"
       width={30}
       height={30}
